@@ -39,8 +39,9 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-sans">
-              From Thesis to Publication — Get professional guidance from our{" "}
-              <strong className="text-slate-900 font-semibold">10+ years experienced</strong> research and content experts.
+              From Thesis to Publication — Serving the academic industry for{" "}
+              <strong className="text-slate-900 font-semibold">2+ years</strong>, with a team of{" "}
+              <strong className="text-slate-900 font-semibold">10+ years experienced</strong> writers and researchers.
             </p>
 
             {/* Checkmark Highlights */}
