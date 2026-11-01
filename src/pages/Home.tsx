@@ -23,7 +23,8 @@ const Home = () => {
             description:
               "Expert academic research consultancy offering thesis guidance, systematic literature reviews, proposal writing, and publication support.",
             url: "https://researchhub.org",
-            telephone: "+91 8956338249",
+            telephone: "+91 8956358249",
+            founder: { "@type": "Person", name: "Humaira Yousuf Sheikh" },
             email: "researchhub147@gmail.com",
             sameAs: [
               "https://instagram.com/researchhub",

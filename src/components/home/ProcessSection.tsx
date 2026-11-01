@@ -32,7 +32,7 @@ const ProcessSection = () => {
       <Container>
         {/* Section Header */}
         <div className="mb-14">
-          <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+          <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
             HOW IT WORKS
           </span>
           <h2
@@ -67,13 +67,13 @@ const ProcessSection = () => {
                       {!isLast && (
                         <div className="hidden lg:flex items-center flex-1 px-2 text-slate-300">
                           <div className="h-0.5 flex-1 bg-slate-200" />
-                          <ArrowRight size={14} className="text-amber-600 ml-1 shrink-0" />
+                          <ArrowRight size={14} className="text-accent-600 ml-1 shrink-0" />
                         </div>
                       )}
                     </div>
 
                     {/* Step Label */}
-                    <span className="text-xs font-bold text-amber-700 tracking-wider uppercase">
+                    <span className="text-xs font-bold text-accent-700 tracking-wider uppercase">
                       {step.step}
                     </span>
 

@@ -22,12 +22,12 @@ const AccordionItem = ({
         className="flex w-full items-center justify-between gap-3 py-3.5 text-left sm:py-4.5 group cursor-pointer"
         aria-expanded={isOpen}
       >
-        <span className="text-sm font-semibold text-slate-900 group-hover:text-amber-800 transition-colors sm:text-base">
+        <span className="text-sm font-semibold text-slate-900 group-hover:text-accent-800 transition-colors sm:text-base">
           {question}
         </span>
         <ChevronDown
           size={18}
-          className={`shrink-0 text-amber-600 transition-transform duration-300 ${
+          className={`shrink-0 text-accent-600 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />

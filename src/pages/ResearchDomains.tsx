@@ -51,10 +51,10 @@ const ResearchDomains = () => {
       />
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-amber-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-accent-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
         <Container>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               DISCIPLINARY COVERAGE
             </span>
             <h1
@@ -78,7 +78,7 @@ const ResearchDomains = () => {
                 placeholder="Search subjects (e.g. Finance, Machine Learning, Robotics, Nursing, Law)..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 bg-white shadow-xs text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                className="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-200 bg-white shadow-xs text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
               />
             </div>
           </div>
@@ -95,11 +95,11 @@ const ResearchDomains = () => {
               return (
                 <div
                   key={domain.id}
-                  className="rounded-2xl border border-slate-200/90 bg-white p-7 sm:p-8 transition-all duration-300 hover:border-amber-400 hover:shadow-xl flex flex-col justify-between"
+                  className="rounded-2xl border border-slate-200/90 bg-white p-7 sm:p-8 transition-all duration-300 hover:border-accent-400 hover:shadow-xl flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-800">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-accent-50 border border-accent-200/80 text-accent-800">
                         <Icon size={26} strokeWidth={1.75} />
                       </div>
                       <div>
@@ -109,7 +109,7 @@ const ResearchDomains = () => {
                         >
                           {domain.title}
                         </h2>
-                        <span className="text-xs text-amber-700 font-semibold">
+                        <span className="text-xs text-accent-700 font-semibold">
                           Over 100+ Specialized Sub-Fields
                         </span>
                       </div>
@@ -134,7 +134,7 @@ const ResearchDomains = () => {
                           </span>
                         ))}
                         {domain.subDisciplines.length > 5 && (
-                          <span className="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-800 text-xs font-semibold">
+                          <span className="px-2.5 py-1 rounded-lg bg-accent-50 text-accent-800 text-xs font-semibold">
                             +{domain.subDisciplines.length - 5} more
                           </span>
                         )}
@@ -155,7 +155,7 @@ const ResearchDomains = () => {
                   <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
                     <Link
                       to={`/research-domains/${domain.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-amber-700 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-accent-700 transition-colors"
                     >
                       <span>Explore Domain Details</span>
                       <ArrowRight size={14} />
@@ -164,7 +164,7 @@ const ResearchDomains = () => {
                     <button
                       type="button"
                       onClick={() => openConsultationModal(undefined, domain.title)}
-                      className="text-xs font-semibold text-amber-700 hover:text-amber-900 cursor-pointer"
+                      className="text-xs font-semibold text-accent-700 hover:text-accent-900 cursor-pointer"
                     >
                       Consult Specialists
                     </button>
@@ -183,7 +183,7 @@ const ResearchDomains = () => {
       </section>
 
       {/* Domain Consultation CTA */}
-      <section className="bg-slate-950 py-16 text-white text-center">
+      <section className="bg-brand-navy py-16 text-white text-center">
         <Container>
           <div className="max-w-2xl mx-auto space-y-4">
             <h2
@@ -199,7 +199,7 @@ const ResearchDomains = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
-                className="px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg active:scale-95 cursor-pointer"
+                className="px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-bold text-sm transition-all shadow-lg active:scale-95 cursor-pointer"
               >
                 Discuss Your Research Topic
               </button>

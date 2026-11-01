@@ -9,6 +9,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/common/SEO";
 import Container from "../components/common/Container";
 import { openConsultationModal } from "../components/common/ConsultationModal";
+import { siteConfig } from "../config/site";
 
 const About = () => {
   const values = [
@@ -47,10 +48,10 @@ const About = () => {
       />
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-amber-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-accent-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
         <Container>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               OUR MISSION & EXPERTISE
             </span>
             <h1
@@ -97,9 +98,9 @@ const About = () => {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-2xl bg-slate-950 text-white p-8 sm:p-9 shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl" />
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-400">
+              <div className="rounded-2xl bg-brand-navy text-white p-8 sm:p-9 shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-accent-500/10 rounded-full blur-2xl" />
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-400">
                   OUR CORE PILLARS
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold font-serif mt-2 mb-4">
@@ -107,19 +108,19 @@ const About = () => {
                 </h3>
                 <ul className="space-y-4 text-xs sm:text-sm text-slate-300">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 size={18} className="text-amber-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 size={18} className="text-accent-400 shrink-0 mt-0.5" />
                     <span>PhD domain mentors with verified university research backgrounds</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 size={18} className="text-amber-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 size={18} className="text-accent-400 shrink-0 mt-0.5" />
                     <span>Non-repository plagiarism verification protecting your thesis</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 size={18} className="text-amber-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 size={18} className="text-accent-400 shrink-0 mt-0.5" />
                     <span>Full revision assistance until official supervisor sign-off</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 size={18} className="text-amber-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 size={18} className="text-accent-400 shrink-0 mt-0.5" />
                     <span>Direct phone and WhatsApp access for rapid status updates</span>
                   </li>
                 </ul>
@@ -129,11 +130,41 @@ const About = () => {
         </Container>
       </section>
 
+      {/* Founder */}
+      <section className="py-16 sm:py-20 bg-slate-50/60 border-t border-slate-100">
+        <Container>
+          <div className="max-w-4xl mx-auto rounded-2xl bg-white border border-slate-200 shadow-sm p-8 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8">
+            <div
+              className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-brand-navy text-white text-3xl font-bold ring-4 ring-brand-gold/30"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              aria-hidden="true"
+            >
+              HS
+            </div>
+            <div className="text-center sm:text-left">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
+                FOUNDER
+              </span>
+              <h2
+                className="text-2xl sm:text-3xl font-bold text-slate-950 mt-1"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                {siteConfig.founder}
+              </h2>
+              <span className="mt-2 block h-[2px] w-10 bg-brand-gold mx-auto sm:mx-0" />
+              <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
+                {siteConfig.founder} founded Research Hub with a clear vision: to give every doctoral and postgraduate scholar access to honest, confidential, and publication-grade research guidance. Under her leadership, Research Hub has supported 2000+ scholars across 800+ academic disciplines.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Core Values Grid */}
       <section className="py-16 sm:py-24 bg-slate-50/60 border-t border-slate-100">
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               TRUST & INTEGRITY
             </span>
             <h2
@@ -153,7 +184,7 @@ const About = () => {
                   className="rounded-2xl bg-white p-6 border border-slate-200/90 shadow-sm flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 border border-amber-200 text-amber-800 mb-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 border border-accent-200 text-accent-800 mb-4">
                       <Icon size={24} />
                     </div>
                     <h3 className="text-base font-bold text-slate-900 mb-2 font-serif">
@@ -171,7 +202,7 @@ const About = () => {
       </section>
 
       {/* Pre-Footer Action */}
-      <section className="bg-slate-950 py-16 text-white text-center">
+      <section className="bg-brand-navy py-16 text-white text-center">
         <Container>
           <div className="max-w-2xl mx-auto space-y-4">
             <h2
@@ -187,7 +218,7 @@ const About = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
-                className="px-7 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg active:scale-95 cursor-pointer"
+                className="px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-bold text-sm transition-all shadow-lg active:scale-95 cursor-pointer"
               >
                 Schedule Free Consultation
               </button>

@@ -72,14 +72,14 @@ const ConsultationModal = ({
     <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-brand-navy/75 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Dialog */}
       <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden my-auto z-10 animate-slide-up">
         {/* Top Header Banner */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-amber-950 p-6 sm:p-7 text-white relative">
+        <div className="bg-gradient-to-r from-brand-navy-light via-slate-800 to-accent-950 p-6 sm:p-7 text-white relative">
           <button
             onClick={onClose}
             className="absolute top-5 right-5 p-2 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
@@ -88,7 +88,7 @@ const ConsultationModal = ({
             <X size={20} />
           </button>
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-300/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-400/20 border border-accent-300/30 text-accent-300 text-xs font-semibold uppercase tracking-wider mb-2">
             <ShieldCheck size={14} />
             100% Confidential & Secure
           </div>
@@ -146,7 +146,7 @@ const ConsultationModal = ({
                   placeholder="e.g. Dr. Priya Sharma"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm"
                 />
               </div>
 
@@ -160,7 +160,7 @@ const ConsultationModal = ({
                   placeholder="e.g. +91 98765 43210"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm"
                 />
               </div>
             </div>
@@ -176,7 +176,7 @@ const ConsultationModal = ({
                   placeholder="e.g. scholar@university.edu"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm"
                 />
               </div>
 
@@ -187,7 +187,7 @@ const ConsultationModal = ({
                 <select
                   value={formData.academicLevel}
                   onChange={(e) => setFormData({ ...formData, academicLevel: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm bg-white"
                 >
                   <option>PhD / Doctoral Candidate</option>
                   <option>Postdoctoral Fellow / Faculty</option>
@@ -206,7 +206,7 @@ const ConsultationModal = ({
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm bg-white"
                 >
                   {servicesData.map((svc) => (
                     <option key={svc.id} value={svc.title}>
@@ -223,7 +223,7 @@ const ConsultationModal = ({
                 <select
                   value={formData.domain}
                   onChange={(e) => setFormData({ ...formData, domain: e.target.value })}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm bg-white"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm bg-white"
                 >
                   {researchDomainsData.map((dom) => (
                     <option key={dom.id} value={dom.title}>
@@ -244,14 +244,14 @@ const ConsultationModal = ({
                 placeholder="Briefly describe your research problem, current stage (proposal, methodology, chapters, revisions), or specific requirements..."
                 value={formData.requirements}
                 onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500 text-sm resize-none"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500 text-sm resize-none"
               />
             </div>
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100">
               <div className="flex items-center gap-4 text-xs text-slate-500">
                 <span className="flex items-center gap-1.5">
-                  <Clock size={14} className="text-amber-600" /> 24h Response
+                  <Clock size={14} className="text-accent-600" /> 24h Response
                 </span>
                 <span className="flex items-center gap-1.5">
                   <ShieldCheck size={14} className="text-emerald-600" /> Non-Disclosure (NDA)
@@ -269,7 +269,7 @@ const ConsultationModal = ({
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs tracking-wide transition-all shadow-md"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy-light hover:bg-brand-navy-light text-white font-semibold text-xs tracking-wide transition-all shadow-md"
                 >
                   <Send size={14} />
                   Submit Request

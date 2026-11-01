@@ -32,7 +32,7 @@ const ResearchDomainsSection = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               RESEARCH DOMAINS
             </span>
             <h2
@@ -48,7 +48,7 @@ const ResearchDomainsSection = () => {
 
           <Link
             to="/research-domains"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 hover:text-amber-700 transition-colors group shrink-0"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 hover:text-accent-700 transition-colors group shrink-0"
           >
             <span>View All Subjects</span>
             <ArrowRight
@@ -67,12 +67,12 @@ const ResearchDomainsSection = () => {
               <Link
                 key={domain.id}
                 to={`/research-domains/${domain.slug}`}
-                className="group flex flex-col items-center justify-center text-center p-5 rounded-2xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-amber-400 hover:shadow-lg transition-all duration-300 active:scale-95 min-h-[140px]"
+                className="group flex flex-col items-center justify-center text-center p-5 rounded-2xl border border-slate-200/90 bg-slate-50/50 hover:bg-white hover:border-accent-400 hover:shadow-lg transition-all duration-300 active:scale-95 min-h-[140px]"
               >
-                <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-800 shadow-xs group-hover:bg-amber-50 group-hover:border-amber-300 group-hover:text-amber-800 transition-colors">
+                <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-800 shadow-xs group-hover:bg-accent-50 group-hover:border-accent-300 group-hover:text-accent-800 transition-colors">
                   <Icon size={22} strokeWidth={1.75} />
                 </div>
-                <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
+                <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-accent-900 transition-colors">
                   {domain.title}
                 </span>
               </Link>
@@ -82,12 +82,12 @@ const ResearchDomainsSection = () => {
           {/* 9th "View All Subjects" Action Card */}
           <Link
             to="/research-domains"
-            className="group flex flex-col items-center justify-center text-center p-5 rounded-2xl border border-dashed border-amber-300 bg-amber-50/40 hover:bg-amber-50 hover:border-amber-500 hover:shadow-md transition-all duration-300 active:scale-95 min-h-[140px]"
+            className="group flex flex-col items-center justify-center text-center p-5 rounded-2xl border border-dashed border-accent-300 bg-accent-50/40 hover:bg-accent-50 hover:border-accent-500 hover:shadow-md transition-all duration-300 active:scale-95 min-h-[140px]"
           >
-            <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-100 text-amber-800 border border-amber-200 shadow-xs group-hover:scale-105 transition-transform">
+            <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-accent-100 text-accent-800 border border-accent-200 shadow-xs group-hover:scale-105 transition-transform">
               <PlusCircle size={24} />
             </div>
-            <span className="text-xs sm:text-sm font-bold text-amber-900">
+            <span className="text-xs sm:text-sm font-bold text-accent-900">
               View All <br /> Subjects
             </span>
           </Link>

@@ -29,10 +29,10 @@ const Resources = () => {
       />
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-amber-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-accent-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
         <Container>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               OPEN ACADEMIC KNOWLEDGE
             </span>
             <h1
@@ -53,7 +53,7 @@ const Resources = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                     selectedCategory === cat
-                      ? "bg-slate-950 text-white shadow-xs"
+                      ? "bg-brand-navy text-white shadow-xs"
                       : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50"
                   }`}
                 >
@@ -72,11 +72,11 @@ const Resources = () => {
             {filtered.map((item) => (
               <div
                 key={item.id}
-                className="rounded-2xl border border-slate-200/90 bg-white p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:border-amber-400 hover:shadow-xl transition-all"
+                className="rounded-2xl border border-slate-200/90 bg-white p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:border-accent-400 hover:shadow-xl transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200/80">
+                    <span className="text-xs font-bold uppercase tracking-wider text-accent-800 bg-accent-50 px-2.5 py-1 rounded-md border border-accent-200/80">
                       {item.category}
                     </span>
                     <span className="text-xs text-slate-400 flex items-center gap-1">
@@ -101,7 +101,7 @@ const Resources = () => {
                     </span>
                     {item.keyPoints.map((point, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-slate-600 leading-relaxed">
-                        <CheckCircle2 size={14} className="text-amber-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 size={14} className="text-accent-600 shrink-0 mt-0.5" />
                         <span>{point}</span>
                       </div>
                     ))}
@@ -112,16 +112,16 @@ const Resources = () => {
                   <button
                     type="button"
                     onClick={() => handleDownload(item.title)}
-                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-900 hover:text-amber-700 transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-900 hover:text-accent-700 transition-colors cursor-pointer"
                   >
-                    <Download size={14} className="text-amber-600" />
+                    <Download size={14} className="text-accent-600" />
                     <span>Download PDF Blueprint</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => openConsultationModal(item.title)}
-                    className="text-xs font-semibold text-amber-700 hover:text-amber-900 cursor-pointer"
+                    className="text-xs font-semibold text-accent-700 hover:text-accent-900 cursor-pointer"
                   >
                     Discuss With Expert
                   </button>

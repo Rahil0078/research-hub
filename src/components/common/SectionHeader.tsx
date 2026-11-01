@@ -20,10 +20,10 @@ const SectionHeader = ({
   return (
     <div className={`max-w-2xl ${alignClass}`}>
       <span className="inline-flex items-center gap-2 sm:gap-3">
-        <span className="h-[2px] w-6 bg-amber-600 sm:w-8" />
+        <span className="h-[2px] w-6 bg-brand-gold sm:w-8" />
         <span
           className={`text-[11px] font-bold uppercase tracking-[0.22em] ${
-            light ? "text-amber-400" : "text-amber-700"
+            light ? "text-accent-400" : "text-accent-700"
           }`}
         >
           {label}

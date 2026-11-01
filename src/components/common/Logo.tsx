@@ -26,8 +26,8 @@ const Logo = ({ dark = false, className = "", size = "md" }: LogoProps) => {
             : "h-11 w-11 text-xl"
         } ${
           dark
-            ? "bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 border-amber-300/40 text-slate-950 shadow-amber-950/20"
-            : "bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 border-amber-400/50 text-white shadow-amber-500/20"
+            ? "bg-gradient-to-br from-accent-500 via-accent-700 to-accent-900 border-accent-300/40 text-white shadow-accent-950/20"
+            : "bg-gradient-to-br from-accent-500 via-accent-600 to-accent-700 border-accent-400/50 text-white shadow-accent-500/20"
         }`}
         style={{ fontFamily: "'Cinzel', 'Playfair Display', serif" }}
       >
@@ -49,12 +49,12 @@ const Logo = ({ dark = false, className = "", size = "md" }: LogoProps) => {
               : "text-lg sm:text-xl"
           } ${
             dark
-              ? "text-white group-hover:text-amber-300"
-              : "text-slate-900 group-hover:text-amber-800"
+              ? "text-white group-hover:text-accent-300"
+              : "text-slate-900 group-hover:text-accent-800"
           }`}
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
-          Research <span className="text-amber-600 font-bold">Hub</span>
+          Research <span className="text-accent-600 font-bold">Hub</span>
         </span>
         <span
           className={`font-bold tracking-[0.22em] uppercase transition-colors select-none ${
@@ -65,8 +65,8 @@ const Logo = ({ dark = false, className = "", size = "md" }: LogoProps) => {
               : "text-[10px] sm:text-[11px] mt-0.5"
           } ${
             dark
-              ? "text-amber-300/90"
-              : "text-amber-800/90"
+              ? "text-accent-300/90"
+              : "text-accent-800/90"
           }`}
         >
           THESIS | RESEARCH | SLR

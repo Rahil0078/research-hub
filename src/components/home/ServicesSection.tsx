@@ -31,7 +31,7 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               OUR SERVICES
             </span>
             <h2
@@ -47,7 +47,7 @@ const ServicesSection = () => {
 
           <Link
             to="/services"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 hover:text-amber-700 transition-colors group shrink-0"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 hover:text-accent-700 transition-colors group shrink-0"
           >
             <span>View All Services</span>
             <ArrowRight
@@ -65,17 +65,17 @@ const ServicesSection = () => {
             return (
               <div
                 key={service.id}
-                className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400 hover:shadow-xl hover:shadow-amber-500/5"
+                className="card-glow group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-[0_24px_60px_-20px_rgba(21,51,106,0.35)]"
               >
                 <div>
                   {/* Icon Container */}
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 border border-slate-200/80 text-slate-800 transition-colors duration-300 group-hover:bg-amber-50 group-hover:border-amber-300/60 group-hover:text-amber-800">
+                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 border border-accent-200/70 text-accent-800 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-accent-700 group-hover:to-brand-navy group-hover:border-transparent group-hover:text-white group-hover:shadow-lg group-hover:shadow-accent-900/30 group-hover:scale-110">
                     <Icon size={24} strokeWidth={1.75} />
                   </div>
 
                   {/* Title */}
                   <h3
-                    className="text-lg font-bold text-slate-900 group-hover:text-amber-900 transition-colors leading-snug"
+                    className="text-lg font-bold text-slate-900 group-hover:text-accent-900 transition-colors leading-snug"
                     style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
                     {service.title}
@@ -91,7 +91,7 @@ const ServicesSection = () => {
                 <div className="mt-6 pt-4 border-t border-slate-100">
                   <Link
                     to={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-amber-700 group-hover:text-amber-700 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-accent-700 group-hover:text-accent-700 transition-colors"
                   >
                     <span>Know More</span>
                     <ArrowRight

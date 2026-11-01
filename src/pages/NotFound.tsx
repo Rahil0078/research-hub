@@ -17,11 +17,11 @@ const NotFound = () => {
       <section className="py-20 sm:py-28 bg-white text-center">
         <Container>
           <div className="max-w-2xl mx-auto space-y-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-50 text-amber-800 border border-amber-200">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent-50 text-accent-800 border border-accent-200">
               <BookOpen size={32} />
             </div>
 
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               ERROR 404
             </p>
 
@@ -39,7 +39,7 @@ const NotFound = () => {
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 to="/"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-semibold text-sm transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-semibold text-sm transition-all"
               >
                 <span>Return to Home</span>
                 <ArrowRight size={16} />

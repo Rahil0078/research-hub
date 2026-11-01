@@ -1,13 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #0B192C;
-  --color-brand-navy-dark: #060E18;
-  --color-brand-navy-light: #152744;
-  --color-brand-gold: #C58F28;
-  --color-brand-gold-dark: #A6751C;
-  --color-brand-gold-light: #FEF9EE;
-  --color-brand-gold-border: #F3DEB0;
+  --color-brand-navy: #001B44;
+  --color-brand-navy-dark: #00122F;
+  --color-brand-navy-light: #0D274E;
+  /* Minimal, muted gold — small highlights only (stars, heading bars) */
+  --color-brand-gold: #B89B5E;
+  --color-brand-gold-dark: #9C8048;
+  --color-brand-gold-light: #F8F5EE;
+  --color-brand-gold-border: #E6DCC6;
+  /* Bright gold reserved for rating stars */
+  --color-brand-star: #FFC21A;
+  /* Primary accent scale (navy / steel blue) — replaces former amber/orange */
+  --color-accent-50: #F3F7FC;
+  --color-accent-100: #E6EDF9;
+  --color-accent-200: #CCDAF2;
+  --color-accent-300: #A7BFE8;
+  --color-accent-400: #7E9FDA;
+  --color-accent-500: #4A74C2;
+  --color-accent-600: #2A56A6;
+  --color-accent-700: #1E4386;
+  --color-accent-800: #15336A;
+  --color-accent-900: #0D274E;
+  --color-accent-950: #001B44;
   --color-brand-whatsapp: #25D366;
   --color-brand-whatsapp-dark: #1EBE5B;
   --color-brand-slate: #0F172A;
@@ -35,8 +50,8 @@
   }
 
   ::selection {
-    background-color: #FDE68A;
-    color: #0B192C;
+    background-color: #CCDAF2;
+    color: #001B44;
   }
 }
 
@@ -95,5 +110,146 @@
   }
   50% {
     transform: translateY(-8px);
+  }
+}
+
+/* ---------- Premium visual effects ---------- */
+@layer utilities {
+  /* Fine grid texture for dark navy sections, fading toward the edges */
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 40%, transparent 100%);
+  }
+
+  /* Deep midnight backdrop used by hero and CTA panels */
+  .bg-midnight {
+    background:
+      radial-gradient(120% 80% at 10% 0%, #15336A 0%, transparent 55%),
+      radial-gradient(90% 70% at 100% 100%, #0D274E 0%, transparent 60%),
+      linear-gradient(160deg, #001B44 0%, #00122F 100%);
+  }
+
+  /* Headline gradient text: white into soft steel blue */
+  .text-gradient-light {
+    background: linear-gradient(100deg, #FFFFFF 0%, #CCDAF2 45%, #7E9FDA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-navy {
+    background: linear-gradient(100deg, #001B44 0%, #1E4386 60%, #4A74C2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Frosted glass panel for dark backgrounds */
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* Slowly drifting ambient light blobs */
+  .aurora {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    pointer-events: none;
+    animation: auroraDrift 16s ease-in-out infinite alternate;
+  }
+
+  /* Light sweep across a button on hover */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.55) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.8s ease;
+  }
+  .btn-shine:hover::after {
+    transform: translateX(120%);
+  }
+
+  /* Animated gradient ring around an element (e.g. hero image) */
+  .glow-ring {
+    position: relative;
+  }
+  .glow-ring::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from var(--ring-angle, 0deg), #4A74C2, #CCDAF2, #B89B5E, #15336A, #4A74C2);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: ringSpin 8s linear infinite;
+    pointer-events: none;
+  }
+
+  /* Card with a gradient border that lights up on hover */
+  .card-glow {
+    position: relative;
+  }
+  .card-glow::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(140deg, #4A74C2, transparent 40%, transparent 60%, #B89B5E);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .card-glow:hover::before {
+    opacity: 1;
+  }
+}
+
+@property --ring-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes ringSpin {
+  to {
+    --ring-angle: 360deg;
+  }
+}
+
+@keyframes auroraDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(40px, -30px, 0) scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora,
+  .glow-ring::before,
+  .animate-float,
+  .animate-pulse-subtle {
+    animation: none;
   }
 }

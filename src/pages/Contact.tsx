@@ -45,15 +45,15 @@ const Contact = () => {
     <Layout>
       <SEO
         title="Contact Us & Book Free Research Consultation | Research Hub"
-        description="Get in touch with Research Hub. Phone: +91 8956338249 / +91 9112837665, Email: researchhub147@gmail.com. Rapid 24-hour turnaround for academic queries."
+        description="Get in touch with Research Hub. Phone: +91 8956358249 / +91 9112837665, Email: researchhub147@gmail.com. Rapid 24-hour turnaround for academic queries."
         url="/contact"
       />
 
       {/* Header */}
-      <section className="bg-gradient-to-b from-amber-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-accent-50/50 via-white to-white py-14 sm:py-20 border-b border-slate-100">
         <Container>
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               GET IN TOUCH
             </span>
             <h1
@@ -75,22 +75,22 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Column: Direct Contact Details & WhatsApp */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="rounded-2xl bg-slate-950 text-white p-7 sm:p-8 shadow-xl space-y-6">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-400">
+              <div className="rounded-2xl bg-brand-navy text-white p-7 sm:p-8 shadow-xl space-y-6">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-400">
                   DIRECT CONTACT CHANNELS
                 </span>
 
                 <div className="space-y-4">
                   <a
                     href={`tel:${siteConfig.phones[0].replace(/\s+/g, "")}`}
-                    className="flex items-start gap-4 p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-colors group"
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-brand-navy-light border border-slate-800 hover:border-accent-500/50 transition-colors group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
                       <Phone size={20} />
                     </div>
                     <div>
                       <span className="text-xs text-slate-400 block">Direct Hotline</span>
-                      <span className="text-base font-bold text-white group-hover:text-amber-400 transition-colors">
+                      <span className="text-base font-bold text-white group-hover:text-accent-400 transition-colors">
                         {siteConfig.phones[0]}
                       </span>
                     </div>
@@ -98,14 +98,14 @@ const Contact = () => {
 
                   <a
                     href={`tel:${siteConfig.phones[1].replace(/\s+/g, "")}`}
-                    className="flex items-start gap-4 p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-colors group"
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-brand-navy-light border border-slate-800 hover:border-accent-500/50 transition-colors group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
                       <Phone size={20} />
                     </div>
                     <div>
                       <span className="text-xs text-slate-400 block">Consultation Desk</span>
-                      <span className="text-base font-bold text-white group-hover:text-amber-400 transition-colors">
+                      <span className="text-base font-bold text-white group-hover:text-accent-400 transition-colors">
                         {siteConfig.phones[1]}
                       </span>
                     </div>
@@ -113,14 +113,14 @@ const Contact = () => {
 
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="flex items-start gap-4 p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-colors group"
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-brand-navy-light border border-slate-800 hover:border-accent-500/50 transition-colors group"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
                       <Mail size={20} />
                     </div>
                     <div>
                       <span className="text-xs text-slate-400 block">Email Inquiries</span>
-                      <span className="text-sm font-bold text-white group-hover:text-amber-400 transition-colors break-all">
+                      <span className="text-sm font-bold text-white group-hover:text-accent-400 transition-colors break-all">
                         {siteConfig.email}
                       </span>
                     </div>
@@ -129,7 +129,7 @@ const Contact = () => {
 
                 <div className="pt-4 border-t border-slate-800 space-y-3 text-xs text-slate-400">
                   <div className="flex items-center gap-2">
-                    <Clock size={16} className="text-amber-400" />
+                    <Clock size={16} className="text-accent-400" />
                     <span>Mon – Sat, 9:00 AM – 8:00 PM IST (24h online response)</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -167,7 +167,7 @@ const Contact = () => {
                 </p>
 
                 {submitted ? (
-                  <div className="p-8 text-center bg-amber-50/50 rounded-2xl border border-amber-200/80">
+                  <div className="p-8 text-center bg-accent-50/50 rounded-2xl border border-accent-200/80">
                     <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3">
                       <CheckCircle2 size={32} />
                     </div>
@@ -208,7 +208,7 @@ const Contact = () => {
                           placeholder="e.g. Rahul Sharma"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                         />
                       </div>
 
@@ -222,7 +222,7 @@ const Contact = () => {
                           placeholder="e.g. +91 98765 43210"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                         />
                       </div>
                     </div>
@@ -238,7 +238,7 @@ const Contact = () => {
                           placeholder="e.g. scholar@university.ac.in"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                         />
                       </div>
 
@@ -249,7 +249,7 @@ const Contact = () => {
                         <select
                           value={formData.academicLevel}
                           onChange={(e) => setFormData({ ...formData, academicLevel: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                         >
                           <option>PhD / Doctoral Scholar</option>
                           <option>Postgraduate / Master's / M.Tech</option>
@@ -267,7 +267,7 @@ const Contact = () => {
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                         >
                           {servicesData.map((s) => (
                             <option key={s.id} value={s.title}>
@@ -284,7 +284,7 @@ const Contact = () => {
                         <select
                           value={formData.domain}
                           onChange={(e) => setFormData({ ...formData, domain: e.target.value })}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                         >
                           {researchDomainsData.map((d) => (
                             <option key={d.id} value={d.title}>
@@ -305,7 +305,7 @@ const Contact = () => {
                         placeholder="Share your research title, problem statement, current status, or university submission deadline..."
                         value={formData.requirements}
                         onChange={(e) => setFormData({ ...formData, requirements: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-500/40 focus:border-amber-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-accent-500/40 focus:border-accent-500"
                       />
                     </div>
 
@@ -317,7 +317,7 @@ const Contact = () => {
 
                       <button
                         type="submit"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-semibold text-xs tracking-wider uppercase transition-all shadow-md active:scale-95 cursor-pointer"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-semibold text-xs tracking-wider uppercase transition-all shadow-md active:scale-95 cursor-pointer"
                       >
                         <Send size={14} />
                         <span>Submit Inquiry</span>

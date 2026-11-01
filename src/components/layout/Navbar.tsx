@@ -60,7 +60,7 @@ const Navbar = () => {
                         ? "text-slate-950 font-semibold after:w-full"
                         : "text-slate-600 hover:text-slate-950 after:w-0"
                     }
-                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-amber-600 after:transition-all after:duration-300 hover:after:w-full
+                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-accent-600 after:transition-all after:duration-300 hover:after:w-full
                   `}
                 >
                   {item.title}
@@ -84,7 +84,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow active:scale-95 group cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow active:scale-95 group cursor-pointer"
               >
                 <span>Get a Free Consultation</span>
                 <ArrowRight
@@ -110,7 +110,7 @@ const Navbar = () => {
                 aria-label="Open menu"
                 aria-expanded={open}
                 onClick={() => setOpen(true)}
-                className="p-2 text-slate-900 hover:text-amber-700"
+                className="p-2 text-slate-900 hover:text-accent-700"
               >
                 <Menu size={26} />
               </button>
@@ -121,7 +121,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer Menu */}
       <div
-        className={`fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[100] bg-brand-navy/70 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpen(false)}
@@ -156,7 +156,7 @@ const Navbar = () => {
                     px-3 py-2.5 rounded-xl text-base font-medium transition-colors
                     ${
                       isActive
-                        ? "bg-amber-50 text-amber-800 font-semibold"
+                        ? "bg-accent-50 text-accent-800 font-semibold"
                         : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                     }
                   `}
@@ -174,7 +174,7 @@ const Navbar = () => {
                 setOpen(false);
                 openConsultationModal();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-semibold text-sm transition-all"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-semibold text-sm transition-all"
             >
               <span>Get a Free Consultation</span>
               <ArrowRight size={16} />

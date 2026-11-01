@@ -12,127 +12,135 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-amber-50/40 via-white to-slate-50/50 pt-8 pb-14 sm:pt-12 sm:pb-20">
-      {/* Subtle background ambient glows */}
-      <div className="absolute top-12 left-1/4 -z-10 w-96 h-96 rounded-full bg-amber-200/20 blur-3xl pointer-events-none" />
-      <div className="absolute top-20 right-10 -z-10 w-80 h-80 rounded-full bg-slate-200/30 blur-3xl pointer-events-none" />
+    <section className="relative isolate overflow-hidden bg-midnight text-white pt-12 pb-24 sm:pt-16 sm:pb-32">
+      {/* Ambient aurora lights + grid texture */}
+      <div className="aurora -z-10 -top-24 left-[10%] h-[420px] w-[420px] bg-accent-500/30" />
+      <div className="aurora -z-10 top-1/3 -right-24 h-[380px] w-[380px] bg-accent-700/40 [animation-delay:-6s]" />
+      <div className="aurora -z-10 bottom-0 left-1/3 h-[260px] w-[260px] bg-brand-gold/10 [animation-delay:-11s]" />
+      <div className="absolute inset-0 -z-10 bg-grid-dark" />
 
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           {/* Left Column: Text & CTA */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-7 animate-slide-up">
             {/* Tagline / Kicker Badge */}
-            <div className="inline-flex items-center gap-2">
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] text-amber-800 bg-amber-100/70 border border-amber-300/60 px-3 py-1 rounded-full">
-                YOUR RESEARCH PARTNER FOR A BRIGHTER TOMORROW
+            <div className="inline-flex items-center gap-2 glass-dark rounded-full px-3.5 py-1.5">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-accent-300 opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-300" />
+              </span>
+              <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-accent-100">
+                Your Research Partner for a Brighter Tomorrow
               </span>
             </div>
 
             {/* Main Headline */}
             <h1
-              className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-slate-950 tracking-tight leading-[1.12]"
+              className="text-4xl sm:text-5xl lg:text-[60px] font-bold tracking-tight leading-[1.08]"
               style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
               Expert Research Support <br className="hidden sm:inline" />
-              <span className="text-slate-900">for Your Academic Journey</span>
+              <span className="relative inline-block text-gradient-light pb-2">
+                for Your Academic Journey
+                <span className="absolute bottom-0 left-0 h-[3px] w-24 rounded-full bg-gradient-to-r from-brand-gold to-transparent" />
+              </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-sans">
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-sans">
               From Thesis to Publication — Serving the academic industry for{" "}
-              <strong className="text-slate-900 font-semibold">2+ years</strong>, with a team of{" "}
-              <strong className="text-slate-900 font-semibold">10+ years experienced</strong> writers and researchers.
+              <strong className="text-white font-semibold">2+ years</strong>, with a team of{" "}
+              <strong className="text-white font-semibold">10+ years experienced</strong> writers and researchers.
             </p>
 
             {/* Checkmark Highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               {highlights.map((item) => (
                 <div key={item} className="flex items-center gap-2.5">
-                  <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500/20 text-amber-700">
-                    <CheckCircle2 size={16} className="fill-amber-500 text-white" />
-                  </div>
-                  <span className="text-xs sm:text-sm font-semibold text-slate-800">
-                    {item}
-                  </span>
+                  <CheckCircle2 size={18} className="shrink-0 text-accent-300" />
+                  <span className="text-xs sm:text-sm font-medium text-slate-200">{item}</span>
                 </div>
               ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
-              {/* Primary Consultation Button */}
+            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white text-sm font-semibold tracking-wide transition-all shadow-md hover:shadow-lg active:scale-95 group cursor-pointer"
+                className="btn-shine inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-white text-brand-navy text-sm font-bold tracking-wide transition-all shadow-[0_10px_40px_-10px_rgba(126,159,218,0.7)] hover:shadow-[0_14px_50px_-8px_rgba(126,159,218,0.9)] hover:-translate-y-0.5 active:scale-95 group cursor-pointer"
               >
                 <span>Get a Free Consultation</span>
                 <ArrowRight size={17} className="transition-transform group-hover:translate-x-1" />
               </button>
 
-              {/* WhatsApp Secondary Button */}
               <a
                 href={createWhatsAppUrl("Hi! I would like to consult with an expert regarding my academic research / thesis / SLR project.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl border-2 border-emerald-500 text-emerald-700 bg-white hover:bg-emerald-50 text-sm font-semibold transition-all shadow-sm active:scale-95 group"
+                className="glass-dark inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl text-white hover:bg-white/10 hover:border-emerald-400/60 text-sm font-semibold transition-all active:scale-95"
               >
-                <MessageCircle size={19} className="text-emerald-600 fill-emerald-100" />
+                <MessageCircle size={19} className="text-emerald-400" />
                 <span>Chat on WhatsApp</span>
               </a>
             </div>
 
             {/* Micro Caption */}
-            <p className="text-xs text-slate-500 pt-1 flex items-center gap-1.5">
-              <Sparkles size={13} className="text-amber-500" />
+            <p className="text-xs text-slate-400 flex items-center gap-1.5">
+              <Sparkles size={13} className="text-brand-gold" />
               Share your requirements and get expert guidance within 24 hours.
             </p>
           </div>
 
-          {/* Right Column: Visual Composite matching screenshot */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+          {/* Right Column: Visual Composite */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end animate-fade-in">
             <div className="relative w-full max-w-[480px]">
-              {/* Main Image Frame */}
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-slate-200/80 bg-white group">
-                <img
-                  src="/images/research-hub/hero-researchers.jpg"
-                  alt="Academic researchers collaborating with research hub mentorship"
-                  width={640}
-                  height={420}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="eager"
-                />
+              {/* Soft glow behind the image */}
+              <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-accent-500/25 blur-3xl" />
 
-                {/* Subtle Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+              {/* Main Image Frame with animated gradient ring */}
+              <div className="glow-ring rounded-2xl shadow-2xl shadow-black/50">
+                <div className="relative overflow-hidden rounded-2xl group">
+                  <img
+                    src="/images/research-hub/hero-researchers.jpg"
+                    alt="Academic researchers collaborating with research hub mentorship"
+                    width={640}
+                    height={420}
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/10 to-transparent pointer-events-none" />
 
-                {/* Bottom Overlay Badge on image */}
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs backdrop-blur-md bg-slate-950/70 px-4 py-2.5 rounded-xl border border-white/20">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
-                    <span className="font-semibold">Mentors Online</span>
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs glass-dark px-4 py-2.5 rounded-xl">
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex h-2.5 w-2.5">
+                        <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                      </span>
+                      <span className="font-semibold">Mentors Online</span>
+                    </div>
+                    <span className="text-accent-200 font-medium">10+ Yrs Field Expertise</span>
                   </div>
-                  <span className="text-amber-300 font-medium">10+ Yrs Field Expertise</span>
                 </div>
               </div>
 
-              {/* Decorative Handwritten Academic Milestones Floating Pill */}
-              <div className="hidden sm:flex absolute -top-5 -right-3 flex-col items-center bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-lg border border-amber-200 text-right rotate-1 animate-float">
-                <span className="text-[11px] font-serif font-bold text-slate-800 italic">
+              {/* Floating milestone pill */}
+              <div className="hidden sm:flex absolute -top-6 -right-4 glass-dark px-4 py-2.5 rounded-xl shadow-xl rotate-2 animate-float">
+                <span className="text-[11px] font-serif font-semibold text-white italic">
                   Ideas ➔ Research ➔ Analysis ➔ Success
                 </span>
               </div>
 
-              {/* Decorative Book Spines Stack representation */}
-              <div className="hidden md:flex absolute -bottom-5 -left-4 flex-col gap-1 bg-slate-950 text-white px-3 py-2.5 rounded-xl shadow-xl border border-amber-500/30 text-[11px] font-bold tracking-widest uppercase">
-                <div className="text-amber-400 flex items-center gap-1.5 text-[10px]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> THESIS & DISSERTATION
+              {/* Floating service stack */}
+              <div className="hidden md:flex absolute -bottom-7 -left-6 flex-col gap-1.5 bg-white text-brand-navy px-4 py-3 rounded-xl shadow-2xl shadow-black/40 text-[10px] font-bold tracking-widest uppercase animate-float [animation-delay:-2s]">
+                <div className="flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent-600" /> Thesis & Dissertation
                 </div>
-                <div className="text-slate-300 flex items-center gap-1.5 text-[10px]">
+                <div className="flex items-center gap-1.5 text-slate-500">
                   <span className="h-1.5 w-1.5 rounded-full bg-slate-400" /> SLR & PRISMA
                 </div>
-                <div className="text-amber-400 flex items-center gap-1.5 text-[10px]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400" /> SCOPUS PUBLICATION
+                <div className="flex items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" /> Scopus Publication
                 </div>
               </div>
             </div>

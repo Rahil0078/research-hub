@@ -72,18 +72,18 @@ const DomainDetail = () => {
       </div>
 
       {/* Domain Hero */}
-      <section className="bg-gradient-to-b from-amber-50/40 via-white to-white py-14 sm:py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-accent-50/40 via-white to-white py-14 sm:py-20 border-b border-slate-100">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-800 bg-amber-100/70 border border-amber-300/60 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-800 bg-accent-100/70 border border-accent-300/60 px-3 py-1 rounded-full">
                   DISCIPLINE SPECIALIZATION
                 </span>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 shadow-xs">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-accent-50 border border-accent-200 text-accent-800 shadow-xs">
                   <Icon size={28} />
                 </div>
                 <h1
@@ -102,7 +102,7 @@ const DomainDetail = () => {
                 <button
                   type="button"
                   onClick={() => openConsultationModal(undefined, domain.title)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-semibold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-semibold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
                 >
                   <span>Consult {domain.title} Specialist</span>
                   <ArrowRight size={16} />
@@ -150,7 +150,7 @@ const DomainDetail = () => {
       <section className="py-16 bg-white border-b border-slate-100">
         <Container>
           <div className="max-w-3xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               SPECIALIZED BRANCHES
             </span>
             <h2
@@ -165,10 +165,10 @@ const DomainDetail = () => {
             {domain.subDisciplines.map((sub, i) => (
               <div
                 key={i}
-                className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-amber-300 hover:shadow-sm transition-all"
+                className="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-accent-300 hover:shadow-sm transition-all"
               >
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 size={16} className="text-accent-600 shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-slate-800">
                     {sub}
                   </span>
@@ -185,14 +185,14 @@ const DomainDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* Sample Research Topics */}
             <div className="space-y-4">
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                 RECENT SCHOLARLY THEMES
               </span>
               <h3
                 className="text-2xl font-bold text-slate-950 flex items-center gap-2"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                <Lightbulb size={22} className="text-amber-600" />
+                <Lightbulb size={22} className="text-accent-600" />
                 <span>Sample Dissertation & Research Titles</span>
               </h3>
               <div className="space-y-3 pt-2">
@@ -210,7 +210,7 @@ const DomainDetail = () => {
             {/* Methodologies & Analytical Tools */}
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                   RESEARCH METHODOLOGIES
                 </span>
                 <h3
@@ -226,7 +226,7 @@ const DomainDetail = () => {
                       key={i}
                       className="flex items-center gap-2.5 p-3 rounded-xl bg-white border border-slate-200 text-xs sm:text-sm font-semibold text-slate-800"
                     >
-                      <span className="w-2 h-2 rounded-full bg-amber-500" />
+                      <span className="w-2 h-2 rounded-full bg-accent-500" />
                       <span>{meth}</span>
                     </div>
                   ))}
@@ -234,7 +234,7 @@ const DomainDetail = () => {
               </div>
 
               <div className="pt-4 border-t border-slate-200">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                   SPECIALIZED SOFTWARE
                 </span>
                 <h3
@@ -248,7 +248,7 @@ const DomainDetail = () => {
                   {domain.keyTools.map((tool) => (
                     <span
                       key={tool}
-                      className="px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-900"
+                      className="px-3 py-1.5 rounded-xl bg-accent-50 border border-accent-200 text-xs font-semibold text-accent-900"
                     >
                       {tool}
                     </span>
@@ -261,7 +261,7 @@ const DomainDetail = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-slate-950 text-white py-14 text-center">
+      <section className="bg-brand-navy text-white py-14 text-center">
         <Container>
           <div className="max-w-xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">
@@ -274,7 +274,7 @@ const DomainDetail = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal(undefined, domain.title)}
-                className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
+                className="px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-bold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
               >
                 Connect with {domain.title} Mentor
               </button>

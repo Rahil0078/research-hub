@@ -44,12 +44,12 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
 
   return (
     <div className="fixed inset-0 z-[120] flex items-start justify-center p-4 sm:p-6 pt-20 sm:pt-28 overflow-y-auto">
-      <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm" onClick={onClose} />
+      <div className="fixed inset-0 bg-brand-navy/70 backdrop-blur-sm" onClick={onClose} />
 
       <div className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-10 animate-slide-up">
         {/* Search Input Bar */}
         <div className="flex items-center px-4 py-3.5 border-b border-slate-100 gap-3">
-          <Search size={20} className="text-amber-600 shrink-0" />
+          <Search size={20} className="text-accent-600 shrink-0" />
           <input
             type="text"
             autoFocus
@@ -73,7 +73,7 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
           {/* Services Section */}
           {filteredServices.length > 0 && (
             <div>
-              <div className="text-[11px] font-bold text-amber-700 uppercase tracking-wider px-2 mb-2 flex items-center gap-1.5">
+              <div className="text-[11px] font-bold text-accent-700 uppercase tracking-wider px-2 mb-2 flex items-center gap-1.5">
                 <Layers size={13} />
                 Research Services ({filteredServices.length})
               </div>
@@ -83,15 +83,15 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
                     key={svc.id}
                     to={`/services/${svc.slug}`}
                     onClick={onClose}
-                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/60 transition-colors group"
+                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-accent-50/60 transition-colors group"
                   >
                     <div>
-                      <div className="text-sm font-semibold text-slate-800 group-hover:text-amber-800">
+                      <div className="text-sm font-semibold text-slate-800 group-hover:text-accent-800">
                         {svc.title}
                       </div>
                       <div className="text-xs text-slate-500 line-clamp-1">{svc.shortDescription}</div>
                     </div>
-                    <ArrowRight size={15} className="text-slate-400 group-hover:text-amber-700 shrink-0" />
+                    <ArrowRight size={15} className="text-slate-400 group-hover:text-accent-700 shrink-0" />
                   </Link>
                 ))}
               </div>

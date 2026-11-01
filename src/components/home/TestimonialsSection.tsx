@@ -21,15 +21,15 @@ const TestimonialsSection = () => {
   const visibleTestimonials = testimonialsData.slice(startIndex, startIndex + 3);
 
   return (
-    <section className="py-20 sm:py-24 bg-slate-950 text-white relative overflow-hidden" id="testimonials">
+    <section className="py-20 sm:py-24 bg-brand-navy text-white relative overflow-hidden" id="testimonials">
       {/* Background glow */}
-      <div className="absolute top-0 right-1/4 -z-10 w-96 h-96 rounded-full bg-amber-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 -z-10 w-96 h-96 rounded-full bg-accent-500/10 blur-[120px] pointer-events-none" />
 
       <Container>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-400">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-400">
               TESTIMONIALS
             </span>
             <h2
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
                     <Star
                       key={i}
                       size={16}
-                      className="fill-amber-400 text-amber-400"
+                      className="fill-brand-star text-brand-star drop-shadow-[0_0_4px_rgba(255,194,26,0.45)]"
                     />
                   ))}
                 </div>
@@ -94,7 +94,7 @@ const TestimonialsSection = () => {
                   alt={t.name}
                   width={46}
                   height={46}
-                  className="w-11 h-11 rounded-full object-cover border border-amber-300/80 shadow-xs shrink-0"
+                  className="w-11 h-11 rounded-full object-cover border border-accent-300/80 shadow-xs shrink-0"
                 />
                 <div>
                   <h4 className="text-sm font-bold text-slate-950">

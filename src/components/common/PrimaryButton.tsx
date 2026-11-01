@@ -16,19 +16,19 @@ interface ButtonProps {
 
 const variantStyles = {
   primary:
-    "bg-slate-950 text-white hover:bg-slate-800 shadow-md hover:shadow-lg active:scale-95",
+    "bg-brand-navy text-white hover:bg-brand-navy-light shadow-md hover:shadow-lg active:scale-95",
 
   secondary:
     "border border-slate-300 text-slate-800 hover:bg-slate-50 active:scale-95",
 
   outline:
-    "border-2 border-amber-600 text-amber-800 hover:bg-amber-50 active:scale-95",
+    "border-2 border-accent-600 text-accent-800 hover:bg-accent-50 active:scale-95",
 
   dark:
-    "bg-slate-900 text-white hover:bg-slate-800 shadow-md hover:shadow-lg active:scale-95",
+    "bg-brand-navy-light text-white hover:bg-brand-navy-light shadow-md hover:shadow-lg active:scale-95",
 
   gold:
-    "bg-amber-500 text-slate-950 hover:bg-amber-400 font-bold shadow-md hover:shadow-lg active:scale-95",
+    "bg-white text-brand-navy hover:bg-slate-100 font-bold shadow-md hover:shadow-lg active:scale-95",
 };
 
 const Button = ({

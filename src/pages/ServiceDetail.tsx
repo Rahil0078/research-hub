@@ -84,12 +84,12 @@ const ServiceDetail = () => {
       </div>
 
       {/* Service Hero Header */}
-      <section className="bg-gradient-to-b from-amber-50/40 via-white to-white py-14 sm:py-20 border-b border-slate-100">
+      <section className="bg-gradient-to-b from-accent-50/40 via-white to-white py-14 sm:py-20 border-b border-slate-100">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-800 bg-amber-100/70 border border-amber-300/60 px-3 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-800 bg-accent-100/70 border border-accent-300/60 px-3 py-1 rounded-full">
                   {service.badge || "Academic Excellence"}
                 </span>
               </div>
@@ -101,7 +101,7 @@ const ServiceDetail = () => {
                 {service.title}
               </h1>
 
-              <p className="text-lg text-amber-900 font-serif font-medium">
+              <p className="text-lg text-accent-900 font-serif font-medium">
                 {service.tagline}
               </p>
 
@@ -113,7 +113,7 @@ const ServiceDetail = () => {
                 <button
                   type="button"
                   onClick={() => openConsultationModal(service.title)}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-semibold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-semibold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
                 >
                   <span>Request Consultation for {service.title}</span>
                   <ArrowRight size={16} />
@@ -135,7 +135,7 @@ const ServiceDetail = () => {
             <div className="lg:col-span-4">
               <div className="rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-lg space-y-5">
                 <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 border border-amber-200 text-amber-800">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 border border-accent-200 text-accent-800">
                     <Icon size={24} />
                   </div>
                   <div>
@@ -149,7 +149,7 @@ const ServiceDetail = () => {
                 <div className="space-y-3">
                   {service.benefits.map((b, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs text-slate-700 leading-relaxed">
-                      <CheckCircle2 size={15} className="text-amber-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 size={15} className="text-accent-600 shrink-0 mt-0.5" />
                       <span>{b}</span>
                     </div>
                   ))}
@@ -168,7 +168,7 @@ const ServiceDetail = () => {
       <section className="py-16 sm:py-20 bg-slate-50/60 border-b border-slate-100">
         <Container>
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
               OUR METHODOLOGY
             </span>
             <h2
@@ -189,7 +189,7 @@ const ServiceDetail = () => {
                 className="rounded-2xl bg-white p-6 border border-slate-200 shadow-sm relative flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-2xl font-extrabold text-amber-600 font-serif">
+                  <span className="text-2xl font-extrabold text-accent-600 font-serif">
                     {m.step}
                   </span>
                   <h3 className="text-base font-bold text-slate-900 mt-2 mb-2 font-serif">
@@ -211,7 +211,7 @@ const ServiceDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* Key Deliverables */}
             <div className="space-y-5">
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+              <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                 WHAT YOU RECEIVE
               </span>
               <h2
@@ -236,7 +236,7 @@ const ServiceDetail = () => {
             {/* Software Tools & Target Audience */}
             <div className="space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                   SOFTWARE & PLATFORMS
                 </span>
                 <h3 className="text-xl font-bold text-slate-950 mt-1 mb-3 flex items-center gap-2">
@@ -256,7 +256,7 @@ const ServiceDetail = () => {
               </div>
 
               <div className="pt-4 border-t border-slate-100">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                   SCHOLAR PROFILES
                 </span>
                 <h3 className="text-xl font-bold text-slate-950 mt-1 mb-3 flex items-center gap-2">
@@ -267,7 +267,7 @@ const ServiceDetail = () => {
                   {service.targetAudience.map((audience) => (
                     <span
                       key={audience}
-                      className="px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-semibold text-amber-900"
+                      className="px-3 py-1.5 rounded-xl bg-accent-50 border border-accent-200 text-xs font-semibold text-accent-900"
                     >
                       {audience}
                     </span>
@@ -285,7 +285,7 @@ const ServiceDetail = () => {
           <Container>
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-10">
-                <span className="text-xs font-bold uppercase tracking-[0.22em] text-amber-700">
+                <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
                   FREQUENTLY ASKED QUESTIONS
                 </span>
                 <h2
@@ -303,7 +303,7 @@ const ServiceDetail = () => {
                     className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs"
                   >
                     <h3 className="text-sm sm:text-base font-bold text-slate-900 flex items-start gap-2.5">
-                      <HelpCircle size={18} className="text-amber-600 shrink-0 mt-0.5" />
+                      <HelpCircle size={18} className="text-accent-600 shrink-0 mt-0.5" />
                       <span>{faq.question}</span>
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 mt-2 pl-7 leading-relaxed">
@@ -318,7 +318,7 @@ const ServiceDetail = () => {
       )}
 
       {/* Bottom CTA */}
-      <section className="bg-slate-950 text-white py-14 text-center">
+      <section className="bg-brand-navy text-white py-14 text-center">
         <Container>
           <div className="max-w-xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">
@@ -331,7 +331,7 @@ const ServiceDetail = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal(service.title)}
-                className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
+                className="px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-bold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
               >
                 Schedule Free Consultation
               </button>
