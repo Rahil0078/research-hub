@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout";
 import Hero from "../components/home/Hero";
 import TrustIndicators from "../components/home/TrustIndicators";
 import ServicesSection from "../components/home/ServicesSection";
+import AboutPreview from "../components/home/AboutPreview";
 import ProcessSection from "../components/home/ProcessSection";
 import ResearchDomainsSection from "../components/home/ResearchDomainsSection";
 import TestimonialsSection from "../components/home/TestimonialsSection";
@@ -37,11 +38,14 @@ const Home = () => {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Trust Indicators (4 stat columns) */}
-      <TrustIndicators />
-
-      {/* 3. Our Services (8 service cards) */}
+      {/* 2. Our Core Services */}
       <ServicesSection />
+
+      {/* 3. About Research Hub + quote */}
+      <AboutPreview />
+
+      {/* 3b. Stats band with gold ribbon */}
+      <TrustIndicators />
 
       {/* 4. How It Works (4 steps + guarantees) */}
       <ProcessSection />

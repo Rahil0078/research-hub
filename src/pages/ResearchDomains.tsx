@@ -199,7 +199,7 @@ const ResearchDomains = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
-                className="px-7 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-bold text-sm transition-all shadow-lg active:scale-95 cursor-pointer"
+                className="px-7 py-3.5 btn-gold rounded-full font-semibold text-sm transition-all shadow-lg active:scale-95 cursor-pointer"
               >
                 Discuss Your Research Topic
               </button>

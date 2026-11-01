@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BrandMark from "../icons/BrandMark";
 
 interface LogoProps {
   dark?: boolean;
@@ -6,70 +7,42 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
+const sizeStyles = {
+  sm: { mark: 34, name: "text-[17px]", tagline: "text-[7.5px]" },
+  md: { mark: 46, name: "text-[22px] sm:text-[25px]", tagline: "text-[8.5px] sm:text-[9.5px]" },
+  lg: { mark: 58, name: "text-[30px]", tagline: "text-[11px]" },
+};
+
 const Logo = ({ dark = false, className = "", size = "md" }: LogoProps) => {
-  const isSmall = size === "sm";
-  const isLarge = size === "lg";
+  const styles = sizeStyles[size];
 
   return (
     <Link
       to="/"
-      className={`inline-flex items-center gap-3 group transition-transform active:scale-95 ${className}`}
+      className={`inline-flex items-center gap-2.5 group transition-transform active:scale-95 ${className}`}
       aria-label="Research Hub - Home"
     >
-      {/* Monogram Crest RH */}
-      <div
-        className={`relative flex items-center justify-center rounded-xl border font-bold transition-all duration-300 shadow-sm ${
-          isSmall
-            ? "h-9 w-9 text-base"
-            : isLarge
-            ? "h-14 w-14 text-2xl"
-            : "h-11 w-11 text-xl"
-        } ${
-          dark
-            ? "bg-gradient-to-br from-accent-500 via-accent-700 to-accent-900 border-accent-300/40 text-white shadow-accent-950/20"
-            : "bg-gradient-to-br from-accent-500 via-accent-600 to-accent-700 border-accent-400/50 text-white shadow-accent-500/20"
-        }`}
-        style={{ fontFamily: "'Cinzel', 'Playfair Display', serif" }}
-      >
-        <span className="tracking-tighter font-extrabold select-none drop-shadow-sm">
-          RH
-        </span>
-        {/* Subtle decorative ring */}
-        <div className="absolute inset-0.5 rounded-[10px] border border-white/25 pointer-events-none" />
-      </div>
+      <BrandMark
+        size={styles.mark}
+        tone={dark ? "dark" : "light"}
+        className="shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5"
+      />
 
-      {/* Brand Text */}
-      <div className="flex flex-col text-left">
+      <div className="flex flex-col text-left leading-none">
         <span
-          className={`font-black tracking-tight leading-none transition-colors select-none ${
-            isSmall
-              ? "text-base"
-              : isLarge
-              ? "text-2xl"
-              : "text-lg sm:text-xl"
-          } ${
-            dark
-              ? "text-white group-hover:text-accent-300"
-              : "text-slate-900 group-hover:text-accent-800"
+          className={`font-bold uppercase tracking-[0.02em] select-none ${styles.name} ${
+            dark ? "text-white" : "text-brand-navy"
           }`}
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
-          Research <span className="text-accent-600 font-bold">Hub</span>
+          Research Hub
         </span>
         <span
-          className={`font-bold tracking-[0.22em] uppercase transition-colors select-none ${
-            isSmall
-              ? "text-[9px] mt-0.5"
-              : isLarge
-              ? "text-[12px] mt-1"
-              : "text-[10px] sm:text-[11px] mt-0.5"
-          } ${
-            dark
-              ? "text-accent-300/90"
-              : "text-accent-800/90"
+          className={`mt-1 font-medium tracking-wide whitespace-nowrap select-none ${styles.tagline} ${
+            dark ? "text-slate-300" : "text-brand-navy/80"
           }`}
         >
-          THESIS | RESEARCH | SLR
+          Research • Publication • Academic Excellence
         </span>
       </div>
     </Link>

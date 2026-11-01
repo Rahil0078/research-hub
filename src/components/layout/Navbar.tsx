@@ -40,7 +40,7 @@ const Navbar = () => {
         }`}
       >
         <Container>
-          <div className="flex h-20 items-center justify-between">
+          <div className="flex h-[74px] sm:h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
               <Logo />
@@ -54,13 +54,13 @@ const Navbar = () => {
                   to={item.path}
                   end={item.path === "/"}
                   className={({ isActive }) => `
-                    relative text-[14px] font-medium transition-colors py-1
+                    relative text-[14.5px] font-medium transition-colors py-1.5
                     ${
                       isActive
-                        ? "text-slate-950 font-semibold after:w-full"
-                        : "text-slate-600 hover:text-slate-950 after:w-0"
+                        ? "text-brand-gold-dark font-semibold after:w-full"
+                        : "text-brand-navy hover:text-brand-gold-dark after:w-0"
                     }
-                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-accent-600 after:transition-all after:duration-300 hover:after:w-full
+                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full
                   `}
                 >
                   {item.title}
@@ -84,9 +84,9 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm hover:shadow active:scale-95 group cursor-pointer"
+                className="btn-gold inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all active:scale-95 group cursor-pointer"
               >
-                <span>Get a Free Consultation</span>
+                <span>Get in Touch</span>
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-1"
@@ -156,7 +156,7 @@ const Navbar = () => {
                     px-3 py-2.5 rounded-xl text-base font-medium transition-colors
                     ${
                       isActive
-                        ? "bg-accent-50 text-accent-800 font-semibold"
+                        ? "bg-brand-gold-light text-brand-navy font-semibold border-l-2 border-brand-gold"
                         : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                     }
                   `}
@@ -174,7 +174,7 @@ const Navbar = () => {
                 setOpen(false);
                 openConsultationModal();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-semibold text-sm transition-all"
+              className="btn-gold w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full font-semibold text-sm transition-all"
             >
               <span>Get a Free Consultation</span>
               <ArrowRight size={16} />

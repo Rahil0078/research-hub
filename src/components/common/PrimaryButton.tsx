@@ -28,7 +28,7 @@ const variantStyles = {
     "bg-brand-navy-light text-white hover:bg-brand-navy-light shadow-md hover:shadow-lg active:scale-95",
 
   gold:
-    "bg-white text-brand-navy hover:bg-slate-100 font-bold shadow-md hover:shadow-lg active:scale-95",
+    "btn-gold rounded-full font-semibold active:scale-95",
 };
 
 const Button = ({

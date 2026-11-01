@@ -26,83 +26,63 @@ const iconMap: Record<string, React.ElementType> = {
 
 const ServicesSection = () => {
   return (
-    <section className="py-16 sm:py-24 bg-white" id="services">
+    <section className="relative py-16 sm:py-20 bg-brand-sky overflow-hidden" id="services">
+      {/* Decorative dot grids, as in the mockup */}
+      <div className="hidden lg:block absolute left-8 top-28 h-24 w-20 bg-[radial-gradient(#012243_1.2px,transparent_1.2px)] [background-size:12px_12px] opacity-15" />
+      <div className="hidden lg:block absolute right-8 top-20 h-24 w-20 bg-[radial-gradient(#012243_1.2px,transparent_1.2px)] [background-size:12px_12px] opacity-15" />
+
       <Container>
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-[0.22em] text-accent-700">
-              OUR SERVICES
-            </span>
-            <h2
-              className="text-3xl sm:text-4xl font-bold text-slate-950 mt-1 tracking-tight"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-            >
-              Comprehensive Research Support
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-xl">
-              End-to-end assistance for every stage of your research journey.
-            </p>
-          </div>
-
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-900 hover:text-accent-700 transition-colors group shrink-0"
+        <div className="text-center mb-12">
+          <h2
+            className="heading-rules text-3xl sm:text-[40px] font-bold text-brand-navy tracking-tight"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            <span>View All Services</span>
-            <ArrowRight
-              size={16}
-              className="transition-transform group-hover:translate-x-1"
-            />
-          </Link>
+            Our Core Services
+          </h2>
+          <p className="text-sm sm:text-lg text-slate-700 mt-3">
+            Comprehensive research solutions tailored to your academic needs
+          </p>
         </div>
 
-        {/* 8 Service Cards Grid (2 rows of 4) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {servicesData.map((service) => {
             const Icon = iconMap[service.iconName] || FileText;
 
             return (
-              <div
+              <Link
                 key={service.id}
-                className="card-glow group relative flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-transparent hover:shadow-[0_24px_60px_-20px_rgba(21,51,106,0.35)]"
+                to={`/services/${service.slug}`}
+                className="group flex flex-col items-center text-center rounded-2xl bg-white px-4 py-7 sm:px-6 border border-slate-200/70 shadow-[0_6px_24px_-12px_rgba(1,34,67,0.18)] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-gold/60 hover:shadow-[0_20px_40px_-18px_rgba(1,34,67,0.35)]"
               >
-                <div>
-                  {/* Icon Container */}
-                  <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 border border-accent-200/70 text-accent-800 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-accent-700 group-hover:to-brand-navy group-hover:border-transparent group-hover:text-white group-hover:shadow-lg group-hover:shadow-accent-900/30 group-hover:scale-110">
-                    <Icon size={24} strokeWidth={1.75} />
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    className="text-lg font-bold text-slate-900 group-hover:text-accent-900 transition-colors leading-snug"
-                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                  >
-                    {service.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {service.shortDescription}
-                  </p>
+                <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-brand-navy text-white shadow-lg shadow-brand-navy/25 transition-transform duration-300 group-hover:scale-110">
+                  <Icon size={26} strokeWidth={1.75} />
                 </div>
 
-                {/* Know More Action Link */}
-                <div className="mt-6 pt-4 border-t border-slate-100">
-                  <Link
-                    to={`/services/${service.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-accent-700 group-hover:text-accent-700 transition-colors"
-                  >
-                    <span>Know More</span>
-                    <ArrowRight
-                      size={14}
-                      className="transition-transform group-hover:translate-x-1"
-                    />
-                  </Link>
-                </div>
-              </div>
+                <h3 className="mt-4 text-sm sm:text-[17px] font-semibold text-brand-navy leading-snug font-sans">
+                  {service.title}
+                </h3>
+
+                <p className="mt-2 hidden sm:block text-xs text-slate-500 leading-relaxed line-clamp-2">
+                  {service.shortDescription}
+                </p>
+
+                <span className="mt-4 flex h-7 w-7 items-center justify-center rounded-full bg-brand-navy text-white transition-colors duration-300 group-hover:bg-brand-gold group-hover:text-brand-navy">
+                  <ArrowRight size={15} />
+                </span>
+              </Link>
             );
           })}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy hover:text-brand-gold-dark transition-colors group"
+          >
+            <span>View All Services</span>
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </Container>
     </section>

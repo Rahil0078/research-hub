@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #001B44;
-  --color-brand-navy-dark: #00122F;
-  --color-brand-navy-light: #0D274E;
-  /* Minimal, muted gold — small highlights only (stars, heading bars) */
-  --color-brand-gold: #B89B5E;
-  --color-brand-gold-dark: #9C8048;
-  --color-brand-gold-light: #F8F5EE;
-  --color-brand-gold-border: #E6DCC6;
+  /* Palette taken from the client's approved mockup */
+  --color-brand-navy: #012243;
+  --color-brand-navy-dark: #00152E;
+  --color-brand-navy-light: #0B2D55;
+  /* Gold — limited use: CTA pills, active nav, headline accent, stat icons, dividers */
+  --color-brand-gold: #EFC374;
+  --color-brand-gold-dark: #D4A452;
+  --color-brand-gold-light: #FDF6E8;
+  --color-brand-gold-border: #F3DDAF;
   /* Bright gold reserved for rating stars */
   --color-brand-star: #FFC21A;
+  --color-brand-sky: #F4F7FC;
   /* Primary accent scale (navy / steel blue) — replaces former amber/orange */
   --color-accent-50: #F3F7FC;
   --color-accent-100: #E6EDF9;
@@ -30,6 +32,7 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Inter", "Outfit", system-ui, -apple-system, sans-serif;
   --font-heading: "Playfair Display", Georgia, serif;
+  --font-script: "Great Vibes", "Playfair Display", cursive;
 }
 
 @layer base {
@@ -250,6 +253,77 @@
   .glow-ring::before,
   .animate-float,
   .animate-pulse-subtle {
+    animation: none;
+  }
+}
+
+/* ---------- Client mockup components ---------- */
+@layer utilities {
+  /* Gold pill CTA (Get in Touch / Explore Our Services) */
+  .btn-gold {
+    background: linear-gradient(180deg, #F7D58F 0%, #EEC170 55%, #E7B762 100%);
+    color: #012243;
+    box-shadow: 0 8px 26px -10px rgba(239, 195, 116, 0.85);
+  }
+  .btn-gold:hover {
+    background: linear-gradient(180deg, #FADD9E 0%, #F2C97E 55%, #EBBE6C 100%);
+    box-shadow: 0 12px 32px -8px rgba(239, 195, 116, 0.95);
+  }
+
+  /* Short gold rules either side of a centred heading */
+  .heading-rules {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .heading-rules::before,
+  .heading-rules::after {
+    content: "";
+    height: 2px;
+    width: 3.5rem;
+    border-radius: 9999px;
+    background: #EFC374;
+  }
+
+  /* Diagonal gold ribbon used at the end of the stats band */
+  .gold-ribbon {
+    background: linear-gradient(115deg, #FBE3B0 0%, #F2CB82 50%, #E8BA66 100%);
+  }
+  @media (min-width: 1024px) {
+    .gold-ribbon {
+      clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  .animate-loader-bar {
+    animation: loaderBar 1.4s ease-in-out infinite;
+  }
+  .animate-cap-bob {
+    animation: capBob 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes loaderBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+@keyframes capBob {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-loader-bar,
+  .animate-cap-bob {
     animation: none;
   }
 }

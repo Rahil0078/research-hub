@@ -50,7 +50,7 @@ const CTASection = () => {
                 <button
                   type="button"
                   onClick={() => openConsultationModal()}
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 btn-shine rounded-xl bg-white text-brand-navy text-sm font-bold tracking-wide transition-all shadow-[0_10px_40px_-10px_rgba(126,159,218,0.7)] hover:-translate-y-0.5 active:scale-95 group cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 btn-gold btn-shine rounded-full text-sm font-semibold tracking-wide transition-all hover:-translate-y-0.5 active:scale-95 group cursor-pointer"
                 >
                   <span>Get a Free Consultation</span>
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -60,7 +60,7 @@ const CTASection = () => {
                   href={createWhatsAppUrl("Hello! I would like to get started with Research Hub for my academic project.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 glass-dark rounded-xl text-white hover:bg-white/10 hover:border-emerald-400/60 text-sm font-semibold transition-all active:scale-95"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 glass-dark rounded-full text-white hover:bg-white/10 hover:border-emerald-400/60 text-sm font-semibold transition-all active:scale-95"
                 >
                   <MessageCircle size={18} className="text-emerald-400" />
                   <span>Chat on WhatsApp</span>

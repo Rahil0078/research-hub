@@ -274,7 +274,7 @@ const DomainDetail = () => {
               <button
                 type="button"
                 onClick={() => openConsultationModal(undefined, domain.title)}
-                className="px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-bold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
+                className="px-6 py-3 btn-gold rounded-full font-semibold text-sm transition-all shadow-md active:scale-95 cursor-pointer"
               >
                 Connect with {domain.title} Mentor
               </button>
