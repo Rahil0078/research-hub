@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, ShieldCheck, Clock, Award, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldCheck, Clock, Award, MessageCircle } from "lucide-react";
 import Container from "../common/Container";
 import Logo from "../common/Logo";
-import { siteConfig, createWhatsAppUrl } from "../../config/site";
+import { site, siteConfig, createWhatsAppUrl } from "../../config/site";
 import { navigation } from "../../constants/navigation";
 
 const Footer = () => {
@@ -103,6 +103,17 @@ const Footer = () => {
                 >
                   <Mail size={16} className="text-accent-500 shrink-0" />
                   <span className="break-all">{siteConfig.email}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={site.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2.5 text-slate-300 hover:text-accent-400 transition-colors"
+                >
+                  <MapPin size={16} className="text-accent-500 shrink-0 mt-0.5" />
+                  <span>{siteConfig.address}</span>
                 </a>
               </li>
             </ul>

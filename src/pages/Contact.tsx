@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   Phone,
   Mail,
+  MapPin,
   MessageCircle,
   Clock,
   ShieldCheck,
@@ -11,7 +12,7 @@ import {
 import Layout from "../components/layout/Layout";
 import SEO from "../components/common/SEO";
 import Container from "../components/common/Container";
-import { siteConfig, createWhatsAppUrl } from "../config/site";
+import { site, siteConfig, createWhatsAppUrl } from "../config/site";
 import { servicesData } from "../data/services";
 import { researchDomainsData } from "../data/domains";
 import { toast } from "sonner";
@@ -122,6 +123,23 @@ const Contact = () => {
                       <span className="text-xs text-slate-400 block">Email Inquiries</span>
                       <span className="text-sm font-bold text-white group-hover:text-accent-400 transition-colors break-all">
                         {siteConfig.email}
+                      </span>
+                    </div>
+                  </a>
+
+                  <a
+                    href={site.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-brand-navy-light border border-slate-800 hover:border-accent-500/50 transition-colors group"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400">
+                      <MapPin size={20} />
+                    </div>
+                    <div>
+                      <span className="text-xs text-slate-400 block">Office Address</span>
+                      <span className="text-sm font-bold text-white group-hover:text-accent-400 transition-colors">
+                        {siteConfig.address}
                       </span>
                     </div>
                   </a>

@@ -17,7 +17,8 @@ export const siteConfig = {
   url: "https://researchhub.org",
   logo: "/favicon.svg",
   defaultImage: "/images/research-hub/hero-researchers.jpg",
-  address: "Academic Research Support Centre, Pune & Mumbai Hub, India",
+  address:
+    "Research Hub, Main 100 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka — 560034",
   instagramHandle: "@researchhub_147",
   stats: {
     subjectsCovered: "800+",
@@ -38,12 +39,14 @@ export const site = {
   defaultImage: siteConfig.defaultImage,
   phone: siteConfig.phones[0],
   email: siteConfig.email,
-  mapUrl: "https://maps.google.com/?q=India",
+  mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    "Main 100 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034"
+  )}`,
   officeAddress: {
-    streetAddress: "Academic Research Support Centre",
-    addressLocality: "Pune",
-    addressRegion: "Maharashtra",
-    postalCode: "411001",
+    streetAddress: "Main 100 Feet Road, 4th Block, Koramangala",
+    addressLocality: "Bengaluru",
+    addressRegion: "Karnataka",
+    postalCode: "560034",
     addressCountry: "IN",
   },
 };
