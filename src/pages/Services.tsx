@@ -141,7 +141,7 @@ const Services = () => {
             <p className="text-slate-400 text-sm leading-relaxed">
               Every academic journey is unique. Share your thesis chapter, dataset, or reviewer comments for a customized plan within 24 hours.
             </p>
-            <div className="pt-4 flex justify-center">
+            <div className="pt-4 flex flex-col sm:flex-row justify-center gap-3">
               <button
                 type="button"
                 onClick={() => openConsultationModal()}
@@ -149,6 +149,12 @@ const Services = () => {
               >
                 Schedule Free Research Consultation
               </button>
+              <Link
+                to="/quotation"
+                className="px-7 py-3.5 rounded-full border-2 border-white/80 font-semibold text-sm tracking-wide text-white transition-all hover:bg-white hover:text-brand-navy active:scale-95"
+              >
+                Get an Instant Quotation
+              </Link>
             </div>
           </div>
         </Container>

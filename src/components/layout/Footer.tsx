@@ -54,6 +54,14 @@ const Footer = () => {
                 </li>
               ))}
               <li>
+                <Link
+                  to="/quotation"
+                  className="text-slate-400 hover:text-accent-400 transition-colors inline-block"
+                >
+                  Get a Quotation
+                </Link>
+              </li>
+              <li>
                 <a
                   href="/#testimonials"
                   className="text-slate-400 hover:text-accent-400 transition-colors inline-block"

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { Menu, X, Search, ArrowRight, MessageCircle } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import { Menu, X, Search, ArrowRight, MessageCircle, FileText } from "lucide-react";
 import Container from "../common/Container";
 import Logo from "../common/Logo";
 import { navigation } from "../../constants/navigation";
@@ -179,6 +179,15 @@ const Navbar = () => {
               <span>Get a Free Consultation</span>
               <ArrowRight size={16} />
             </button>
+
+            <Link
+              to="/quotation"
+              onClick={() => setOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full border-2 border-brand-gold text-brand-navy font-semibold text-sm hover:bg-brand-gold-light transition-colors"
+            >
+              <FileText size={17} className="text-brand-gold-dark" />
+              <span>Get Instant Quotation</span>
+            </Link>
 
             <a
               href={createWhatsAppUrl()}
