@@ -18,7 +18,7 @@ export const siteConfig = {
   logo: "/favicon.svg",
   defaultImage: "/images/research-hub/hero-researchers.jpg",
   address:
-    "Research Hub, Main 100 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka — 560034",
+    "Landmark Plaza, 2nd Floor, 80 Feet Road, 6th Block, Koramangala, Bangalore, Karnataka – 560095",
   instagramHandle: "@researchhub_147",
   stats: {
     subjectsCovered: "800+",
@@ -40,13 +40,13 @@ export const site = {
   phone: siteConfig.phones[0],
   email: siteConfig.email,
   mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    "Main 100 Feet Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034"
+    "Landmark Plaza, 80 Feet Road, 6th Block, Koramangala, Bangalore, Karnataka 560095"
   )}`,
   officeAddress: {
-    streetAddress: "Main 100 Feet Road, 4th Block, Koramangala",
-    addressLocality: "Bengaluru",
+    streetAddress: "Landmark Plaza, 2nd Floor, 80 Feet Road, 6th Block, Koramangala",
+    addressLocality: "Bangalore",
     addressRegion: "Karnataka",
-    postalCode: "560034",
+    postalCode: "560095",
     addressCountry: "IN",
   },
 };
