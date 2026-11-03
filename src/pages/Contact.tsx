@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import {
-  FileText,
   Phone,
   Mail,
   MapPin,
@@ -169,13 +167,6 @@ const Contact = () => {
                     <MessageCircle size={18} />
                     <span>Chat on WhatsApp Directly</span>
                   </a>
-                  <Link
-                    to="/quotation"
-                    className="mt-3 w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl border border-brand-gold/60 text-brand-gold hover:bg-brand-gold hover:text-brand-navy font-bold text-sm transition-all active:scale-95"
-                  >
-                    <FileText size={18} />
-                    <span>Get an Instant Quotation</span>
-                  </Link>
                 </div>
               </div>
             </div>

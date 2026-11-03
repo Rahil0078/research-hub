@@ -11,7 +11,6 @@ const DomainDetail = lazy(() => import("../pages/DomainDetail"));
 const About = lazy(() => import("../pages/About"));
 const Resources = lazy(() => import("../pages/Resources"));
 const Contact = lazy(() => import("../pages/Contact"));
-const Quotation = lazy(() => import("../pages/Quotation"));
 const Privacy = lazy(() =>
   import("../pages/Legal").then((m) => ({ default: m.Privacy }))
 );
@@ -33,7 +32,6 @@ const AppRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/quotation" element={<Quotation />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />

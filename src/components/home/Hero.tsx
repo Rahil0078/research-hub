@@ -1,4 +1,4 @@
-import { ArrowRight, FileText, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Container from "../common/Container";
 import { createWhatsAppUrl } from "../../config/site";
@@ -61,17 +61,6 @@ const Hero = () => {
               <span>Chat on WhatsApp</span>
             </a>
           </div>
-
-          <Link
-            to="/quotation"
-            className="group mt-5 [@media(max-height:700px)]:mt-3 inline-flex items-center gap-2 text-sm sm:text-[15px] text-slate-200 transition-colors hover:text-brand-gold"
-          >
-            <FileText size={17} className="text-brand-gold" />
-            <span>
-              Know your fee instantly — <span className="font-semibold text-brand-gold underline underline-offset-4">Build a quotation</span>
-            </span>
-            <ArrowRight size={16} className="text-brand-gold transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
       </Container>
 
